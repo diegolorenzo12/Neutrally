@@ -7,20 +7,30 @@ function fetchData() {
     chrome.tabs.sendMessage(
       tabs[0].id,
       { greeting: "fetchData" },
-      (response) => {
+      async (response) => {
         let a = response;
         console.log(a);
-        a = a.replace(/(\r\n|\n|\r)/gm, "");
+        a = a.replace(/(\r\n|\n|\r)/gm, " ");
         let ele = document.getElementById("content");
         ele.innerHTML = a;
-        a = a.replace(/[^a-zA-Z0-9 ]/g, "");
+        a = a.replace(/[^a-zA-Z0-9 ]/g, " ");
         var arr = a.split(" ");
         arr = arr.filter(function (entry) {
           return entry.trim() != "";
         });
         console.log(arr);
-        //alert(a);
-
+        for(let i = 0; i < arr.length; i++){
+          if(arr[i].length > 1){
+            let res = await gender(arr[i]);
+            if(res == "f"){
+              highlight(arr[i]);
+            }
+            if(res == "m"){
+              highlight(arr[i]);
+            }
+          }
+        }
+        
         highlight("save");
       }
     );

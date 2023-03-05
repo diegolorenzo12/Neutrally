@@ -2216,6 +2216,7 @@ const dict = {
   gilder: "n",
   gillie: "m",
   girl: "f",
+  girls: "f",
   girl_friday: "f",
   girl_scout: "f",
   girl_wonder: "f",
