@@ -11,7 +11,7 @@ function fetchData() {
         let a = response;
         //let b = a;
         //b = b.replace(/(\r\n|\n|\r)/gm, "<br> ");
-        a = a.replace(/(\r\n|\n|\r)/gm, "<br> ");
+        //a = a.replace(/(\r\n|\n|\r)/gm, "<br> ");
         let ele = document.getElementById("content");
         a = a.replace(/[^a-zA-Z0-9 ]/g, " ");
         ele.innerHTML = ' ' + a;
