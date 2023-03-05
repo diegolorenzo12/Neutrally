@@ -71,3 +71,7 @@ body{
 .buttonAlignCenter {
 	text-align: center;
 }
+
+.highlight{
+    background-color: #EEF43B;
+}
