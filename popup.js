@@ -13,6 +13,17 @@ function fetchData() {
         a = a.replace(/(\r\n|\n|\r)/gm, " ");
         let ele = document.getElementById("content");
         ele.innerHTML = a;
+        if (a.length>85) {
+          var elemento = document.getElementsByClassName("infoBox");
+          for(var i = 0; i < elemento.length; i++)
+              elemento[i].className += " changedInfoBox";
+          var elemento = document.getElementsByClassName("structure");
+          for(var i = 0; i < elemento.length; i++)
+              elemento[i].className += " changedInfoBox";
+          var elemento = document.getElementsByClassName("text");
+          for(var i = 0; i < elemento.length; i++)
+              elemento[i].className += " changedText";
+        }
         a = a.replace(/[^a-zA-Z0-9 ]/g, " ");
         var arr = a.split(" ");
         arr = arr.filter(function (entry) {

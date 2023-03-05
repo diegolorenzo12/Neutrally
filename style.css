@@ -20,12 +20,14 @@ body{
 	min-width: 18rem;
 	min-height: 18rem;
 	max-height: 30rem;
+	max-width: 45rem;
 }
 
 .infoBox {
 	min-width: 14rem;
+	max-width: 20rem;
 	min-height: 10.5rem;
-	max-height: 25rem;
+	max-height: 15rem;
 	background-color: #9DC08B;
 	margin-left: 2rem;
 	margin-right: 2rem;
@@ -66,10 +68,22 @@ body{
 	padding: 1rem;
 	text-align: justify;
 	color: white;
+	min-height: 5rem;
+	max-height: 7rem;
 }
 
 .buttonAlignCenter {
 	text-align: center;
+}
+
+.changedInfoBox {
+	min-width: 40rem;
+	min-height: 22rem;
+}
+
+.changedText {
+	overflow-y: scroll;
+	min-height: 15.5rem;
 }
 
 .highlight{
