@@ -9,12 +9,12 @@ function fetchData() {
       { greeting: "fetchData" },
       async (response) => {
         let a = response;
-        console.log(a);
-        let b = a;
+        //let b = a;
         //b = b.replace(/(\r\n|\n|\r)/gm, "<br> ");
-        a = a.replace(/(\r\n|\n|\r)/gm, " ");
+        a = a.replace(/(\r\n|\n|\r)/gm, "<br> ");
         let ele = document.getElementById("content");
-        ele.innerHTML = ' ' + b;
+        a = a.replace(/[^a-zA-Z0-9 ]/g, " ");
+        ele.innerHTML = ' ' + a;
         if (a.length>85) {
           var elemento = document.getElementsByClassName("infoBox");
           for(var i = 0; i < elemento.length; i++)
@@ -26,8 +26,7 @@ function fetchData() {
           for(var i = 0; i < elemento.length; i++)
               elemento[i].className += " changedText";
         }
-        a = a.replace(/[^a-zA-Z0-9 ]/g, " ");
-        b = b.replace(/[^a-zA-Z0-9 ]/g, " ");
+        console.log(a);
         var arr = a.split(" ");
         arr = arr.filter(function (entry) {
           return entry.trim() != "";
@@ -63,6 +62,5 @@ function highlight(text) {
   text = " " +  text;
   var newText = "<span class='highlight'>" + text + "</span>";
   innerHTML = innerHTML.replaceAll(text, newText)
-  console.log(innerHTML);
   inputText.innerHTML = innerHTML;
 }
