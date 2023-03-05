@@ -17,7 +17,7 @@ function fetchData() {
         console.log(arr);
 
         let ele = document.getElementById("content");
-        ele.innerHTML += a;
+        ele.innerHTML = a;
 
         highlight("");
       }

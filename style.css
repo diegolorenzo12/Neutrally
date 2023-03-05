@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap');
+
+body{
+	margin: 0;
+}
+
+.title {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+	padding-top: 0.4rem;
+	font-size: 1.7rem;
+	color: #609966;
+}
+
+.structure {
+	display: inline-block;
+	background-color: #EDF1D6;
+	min-width: 18rem;
+	min-height: 18rem;
+	max-height: 30rem;
+}
+
+.infoBox {
+	min-width: 14rem;
+	min-height: 10.5rem;
+	max-height: 25rem;
+	background-color: #9DC08B;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	border-radius: 0.5rem;
+}
+
+.evaluateButton {
+	background-color: #609966;
+	border-radius: 1rem;
+	text-align: center;
+	font-size: 1.5rem;
+	width: 9rem;
+	height: 2rem;
+	font-family: 'Quicksand', sans-serif;
+	padding-bottom: 2rem;
+	margin-bottom: 1rem;
+	border: 0;
+	color: #FFFFFF;
+}
+
+.evaluateButton:hover {
+	color: #FFFFFF;
+	background-color: #40513B;
+	border: 0;
+	transition-duration: 0.5s;
+	cursor: pointer;
+}
+
+.evaluateButton:active {
+	transform: translateY(0.5rem);
+}
+
+.text {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.3rem;
+	padding: 1rem;
+	text-align: justify;
+	color: white;
+}
+
+.buttonAlignCenter {
+	text-align: center;
+}
