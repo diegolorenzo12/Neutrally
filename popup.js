@@ -10,9 +10,11 @@ function fetchData() {
       async (response) => {
         let a = response;
         console.log(a);
+        let b = a;
+        b = b.replace(/(\r\n|\n|\r)/gm, "<br> ");
         a = a.replace(/(\r\n|\n|\r)/gm, " ");
         let ele = document.getElementById("content");
-        ele.innerHTML = a;
+        ele.innerHTML = ' ' + b;
         if (a.length>85) {
           var elemento = document.getElementsByClassName("infoBox");
           for(var i = 0; i < elemento.length; i++)
@@ -29,6 +31,15 @@ function fetchData() {
         arr = arr.filter(function (entry) {
           return entry.trim() != "";
         });
+        arr.sort();
+          const rem = [];
+          rem.push(arr[0]);
+          for(let i = 1; i < arr.length; i++){
+            if(arr[i] != arr[i+1]){
+              rem.push(arr[i]);
+            }
+          }
+          arr = rem;
         console.log(arr);
         for(let i = 0; i < arr.length; i++){
           if(arr[i].length > 1){
@@ -41,24 +52,16 @@ function fetchData() {
             }
           }
         }
-        
-        highlight("save");
       }
     );
   });
 }
-
 function highlight(text) {
   var inputText = document.getElementById("content");
   var innerHTML = inputText.innerHTML;
-  var index = innerHTML.indexOf(text);
-  if (index >= 0) {
-    innerHTML =
-      innerHTML.substring(0, index) +
-      "<span class='highlight'>" +
-      innerHTML.substring(index, index + text.length) +
-      "</span>" +
-      innerHTML.substring(index + text.length);
-    inputText.innerHTML = innerHTML;
-  }
+  text = " " +  text;
+  var newText = "<span class='highlight'>" + text + "</span>";
+  innerHTML = innerHTML.replaceAll(text, newText)
+  console.log(innerHTML);
+  inputText.innerHTML = innerHTML;
 }
