@@ -1,0 +1,17 @@
+{
+  "name": "Neutrally",
+  "description": "An extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html"
+  },
+
+  "permissions": ["declarativeContent", "activeTab", "tabs", "downloads", "scripting", "nativeMessaging", "storage", "*://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"]
+    }
+  ]
+}
