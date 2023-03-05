@@ -9,17 +9,19 @@ function fetchData() {
         let a = response;
         console.log(a);
         a = a.replace(/(\r\n|\n|\r)/gm, "");
+        let ele = document.getElementById("content");
+        ele.innerHTML = a;
+        a = a.replace(/[^a-zA-Z0-9 ]/g, '');
         var arr = a.split(" ");
         arr = arr.filter(function (entry) {
           return entry.trim() != "";
         });
-        //alert(a);
         console.log(arr);
+        //alert(a);
+        
 
-        let ele = document.getElementById("content");
-        ele.innerHTML = a;
 
-        highlight("");
+        highlight("save");
       }
     );
   });
