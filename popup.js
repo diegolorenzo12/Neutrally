@@ -1,3 +1,5 @@
+import { gender } from "./logica.js";
+
 document.getElementById("myButton").addEventListener("click", fetchData);
 
 function fetchData() {
@@ -11,15 +13,13 @@ function fetchData() {
         a = a.replace(/(\r\n|\n|\r)/gm, "");
         let ele = document.getElementById("content");
         ele.innerHTML = a;
-        a = a.replace(/[^a-zA-Z0-9 ]/g, '');
+        a = a.replace(/[^a-zA-Z0-9 ]/g, "");
         var arr = a.split(" ");
         arr = arr.filter(function (entry) {
           return entry.trim() != "";
         });
         console.log(arr);
         //alert(a);
-        
-
 
         highlight("save");
       }
