@@ -11,7 +11,7 @@ function fetchData() {
         let a = response;
         console.log(a);
         let b = a;
-        b = b.replace(/(\r\n|\n|\r)/gm, "<br> ");
+        //b = b.replace(/(\r\n|\n|\r)/gm, "<br> ");
         a = a.replace(/(\r\n|\n|\r)/gm, " ");
         let ele = document.getElementById("content");
         ele.innerHTML = ' ' + b;
@@ -27,6 +27,7 @@ function fetchData() {
               elemento[i].className += " changedText";
         }
         a = a.replace(/[^a-zA-Z0-9 ]/g, " ");
+        b = b.replace(/[^a-zA-Z0-9 ]/g, " ");
         var arr = a.split(" ");
         arr = arr.filter(function (entry) {
           return entry.trim() != "";
