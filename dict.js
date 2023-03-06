@@ -1,6 +1,8 @@
 //import data from './dict.json';
 const dict = {
   it: "n",
+  hijra: "n",
+  hijras: "n",
   abandoned_person: "n",
   abator: "n",
   abbe: "n",
