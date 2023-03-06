@@ -735,7 +735,6 @@ const dict = {
   brigadier: "n",
   britisher: "n",
   briton: "n",
-  broad: "f",
   broadcast_journalist: "n",
   broadcaster: "n",
   "broker-dealer": "n",
